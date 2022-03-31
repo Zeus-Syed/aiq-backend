@@ -98,6 +98,7 @@ export class AppComponent implements OnInit {
     this.appService.getPlantData().subscribe(
       (response) => {
         if (response.success === true) {
+          console.log('response', response.data.plantData)
           this.plantData = response.data.plantData;
           this.stateData = response.data.stateData;
           let arrayToConsider: Plant[] = this.considerPlantDataBasedOnTopValue(response.data.plantData, response.data.stateData, this.top)
@@ -153,6 +154,7 @@ export class AppComponent implements OnInit {
       );
       if (filteredArray.length > 0) {
         filteredArray.sort(this.compare);
+        filteredArray.reverse();
         if (filteredArray.length > noOfPlants) {
           let topArray: Plant[] = filteredArray.slice(0, noOfPlants);
           finalArray = [...finalArray, ...topArray];
