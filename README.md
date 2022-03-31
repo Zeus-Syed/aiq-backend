@@ -1,27 +1,11 @@
-# AiqFrontend
+command to run
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+    ng serve --open
 
-## Development server
+Description:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Top N number of plants of each state in US will be marked in google maps in the form of markers.
+- when the app loads, the plant data will be fetched from backend.
+- Each marker has plant name, state code, net generation value (in MWh) and percentage. On clicking the marker, we can see the details of that specific marker.
+- By changing value in 'State' dropdown, top N number of plants of that particular state will be rendered.
+- By changing value in 'Top N Plants' dropdown, top N number of plants of the selected state will be rendered.

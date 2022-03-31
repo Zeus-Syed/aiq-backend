@@ -1,24 +1,25 @@
-<div style="display: flex;">
-  <div style="display: flex; flex-direction: row; width: 300px;">
-    <p>State: </p> <select (change)="changeState($event)" style="height: 30px; align-self: center;">
+<div class="dropdownHead">
+  <div class="stateDropdown">
+    <p class="labelDropDown">State: </p> <select class="stateSelect" (change)="changeState($event)">
       <option>Choose State</option>
       <option *ngFor="let state of stateData">{{state}}</option>
     </select>
   </div>
   <p> </p>
-  <div style="display: flex; flex-direction: row; width: 300px;">
-    <p>Top N Plants: </p> <select (change)="changeTopState($event)" style="height: 30px; align-self: center;">
+  <div class="topDropdown">
+    <p class="labelDropDown">Top N Plants: </p> <select class="topSelect" (change)="changeTopState($event)">
       <option>Choose Top Plants</option>
       <option value="3">3</option>
       <option value="5">5</option>
       <option value="7">7</option>
+      <option value="7">10</option>
     </select>
   </div>
 </div>
 <p> </p>
 <google-map height="800px" width="100%" [zoom]="zoom" [center]="center">
-  <map-marker #somemarker="mapMarker" *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
-    [title]="marker.title" [options]="marker.options" (mapClick)="openInfo(somemarker, marker)">
+  <map-marker #somemarker="mapMarker" *ngFor="let marker of markers" [position]="marker.position" [title]="marker.title"
+    (mapClick)="openInfo(somemarker, marker)">
   </map-marker>
   <map-info-window>
     <p>{{ infoContent.title }} ({{ infoContent.state }})</p>

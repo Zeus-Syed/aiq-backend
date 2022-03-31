@@ -1,0 +1,29 @@
+.dropdownHead {
+  display: flex;
+}
+
+.stateDropdown {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.topDropdown {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.stateSelect {
+  height: 30px;
+  align-self: center;
+}
+
+.topSelect {
+  height: 30px;
+  align-self: center;
+}
+
+p {
+  font-weight: bold;
+}
